@@ -501,7 +501,7 @@ class sfThemeManager
       {
         if (isset($themeConfig['inherit']) && isset($themes[$themeConfig['inherit']]))
         {
-          $themes[$key] = array_merge($themes[$themeConfig['inherit']], $themeConfig);
+          $themes[$key] = sfToolkit::arrayDeepMerge($themes[$themeConfig['inherit']], $themeConfig);
         }
       }
     }
